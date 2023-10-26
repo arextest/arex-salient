@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   async function onSubmit(event: React.SyntheticEvent) {
-    event.preventDefault()
-    setIsLoading(true)
+    event.preventDefault();
+    setIsLoading(true);
 
     setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
+      setIsLoading(false);
+    }, 3000);
   }
 
   return (
@@ -41,19 +41,18 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
             />
           </div>
 
-
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="password">
               Password
             </Label>
             <Input
-                id="password"
-                placeholder="password"
-                type="password"
-                autoCapitalize="none"
-                autoComplete="password"
-                autoCorrect="off"
-                disabled={isLoading}
+              id="password"
+              placeholder="password"
+              type="password"
+              autoCapitalize="none"
+              autoComplete="password"
+              autoCorrect="off"
+              disabled={isLoading}
             />
           </div>
 
@@ -84,5 +83,5 @@ export function UserLoginForm({ className, ...props }: UserAuthFormProps) {
       {/*  Github*/}
       {/*</Button>*/}
     </div>
-  )
+  );
 }
