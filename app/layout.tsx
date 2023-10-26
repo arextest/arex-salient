@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 }
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import DashboardPage from "@/app/components/indexlayout";
 export default function RootLayout({
   children,
 }: {
@@ -25,7 +26,10 @@ export default function RootLayout({
                 fontSans.variable
             )}
         >
-        {children}
+        <DashboardPage>
+            {children}
+        </DashboardPage>
+
         </body>
         </html>
       </>
