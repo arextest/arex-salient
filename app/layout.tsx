@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import DashboardPage from "@/app/components/indexlayout";
+import { ThemeProvider } from '@/components/theme-provider'
 export default function RootLayout({
   children,
 }: {
@@ -26,10 +27,17 @@ export default function RootLayout({
                 fontSans.variable
             )}
         >
-        <DashboardPage>
-            {children}
-        </DashboardPage>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+        >
+            <DashboardPage>
+                {children}
+            </DashboardPage>
 
+        </ThemeProvider>
         </body>
         </html>
       </>
