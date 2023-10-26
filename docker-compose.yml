@@ -2,10 +2,8 @@
 version: '3'
 services:
   arex:
-    image: zhangtao25/arex-trace:main
+    image: zhangtao25/arex-salient:main
     restart: always
-    container_name: arex-trace
+    container_name: arex-salient
     ports:
-      - 8080:8080
-    volumes:
-      - ./packages/app-backend/conf/application.yml:/app/packages/app-backend/conf/application.yml
+      - 28080:8080
