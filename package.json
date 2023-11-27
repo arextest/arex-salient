@@ -1,0 +1,17 @@
+{
+  "name": "salient",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "pnpm -r do-test",
+    "dev": "pnpm -r do-dev",
+    "build": "pnpm -r do-build",
+    "migrate": "prisma migrate dev --schema ./packages/salient-backend/prisma/schema.prisma",
+    "rm": "find ./ -type d \\( -name \"dist\" -o -name \"node_modules\" \\) -exec rm -rf {} +",
+    "preinstall": "node ./check.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
