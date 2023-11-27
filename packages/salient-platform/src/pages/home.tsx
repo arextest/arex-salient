@@ -22,7 +22,13 @@ function App() {
       dataIndex: "email",
     },
   ];
-  return <Table rowKey={'id'} columns={columns} dataSource={getUsersData?.getUsers} />;
+  return (
+    <Table
+      rowKey={"id"}
+      columns={columns}
+      dataSource={getUsersData?.getUsers}
+    />
+  );
 }
 
 export default App;

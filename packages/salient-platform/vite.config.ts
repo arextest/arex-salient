@@ -8,6 +8,7 @@ export default defineConfig({
   plugins: [react(), Pages(), Icons({ compiler: "jsx", jsx: "react" })],
   resolve: {
     alias: {
+      "@/components": path.resolve(__dirname, "./src/components"),
       "@": path.resolve(__dirname, "./src"),
     },
   },
