@@ -4,7 +4,7 @@ import { User } from './user.model';
 @Injectable()
 export class UserService {
   constructor(private prisma: PrismaService) {}
-  getUsers(): Promise<User[]> {
-    return this.prisma.user.findMany({});
+  getUsers(): any[] {
+    return []
   }
 }

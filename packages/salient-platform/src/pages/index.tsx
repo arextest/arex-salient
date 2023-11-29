@@ -66,7 +66,7 @@ const Index: React.FC = () => {
       <div className={"grid gap-y-2 grid-cols-1"}>
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => {
           return (
-            <div className={"bg-white p-[20px]"}>
+            <div className={"bg-white p-[20px]"} key={index}>
               <div className={"flex justify-between mb-2"}>
                 <div>
                   <Text>Ant Design (default)</Text>

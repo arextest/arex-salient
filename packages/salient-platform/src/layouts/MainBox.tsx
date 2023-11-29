@@ -44,6 +44,17 @@ const App: React.FC = () => {
   const nav = useNavigate();
   // const { data: meData } = useQuery(MeDocument);
 
+  const meData = (()=>{
+    try {
+      console.log(JSON.parse(localStorage.getItem('user')||'{}'))
+      return JSON.parse(localStorage.getItem('user')||'{}');
+    } catch (e) {
+      return {
+
+      }
+    }
+  })()
+
   const defaultSelectedKeys = (() => {
     if (localStorage.getItem("main-selectedKeys")) {
       return localStorage.getItem("main-selectedKeys") === "true";
@@ -57,7 +68,7 @@ const App: React.FC = () => {
     localStorage.setItem("main-selectedKeys", collapsed.toString());
   }, [collapsed]);
   const loc = useLocation();
-  const mode = ["/register", "/login"].includes(loc.pathname);
+  const mode = ["/register", "/login","/transhipment","/Transhipment"].includes(loc.pathname);
   const r = useRoutes(routes);
 
   const selectedKey = useMemo(() => {
@@ -106,7 +117,7 @@ const App: React.FC = () => {
   const dropdownClick = ({ key }: any) => {
     if (key === "logout") {
       localStorage.clear();
-      window.location.href = "/welcome";
+      window.location.href = "/login";
     }
     if (key === "settings") {
       // window.location.href = '/settings';
@@ -191,7 +202,7 @@ const App: React.FC = () => {
                     onClick={(e) => e.preventDefault()}
                   >
                     {/*<Avatar src={meData?.me.avatar} />*/}
-                    {/*<span>{meData?.me.nickname}</span>*/}
+                    <span>{meData?.username}</span>
                   </Space>
                 </Dropdown>
 
