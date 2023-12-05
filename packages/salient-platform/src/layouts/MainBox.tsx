@@ -68,7 +68,7 @@ const App: React.FC = () => {
     localStorage.setItem("main-selectedKeys", collapsed.toString());
   }, [collapsed]);
   const loc = useLocation();
-  const mode = ["/register", "/login","/transhipment","/Transhipment"].includes(loc.pathname);
+  const mode = ["/register", "/login","/deployment","/price"].includes(loc.pathname);
   const r = useRoutes(routes);
 
   const selectedKey = useMemo(() => {

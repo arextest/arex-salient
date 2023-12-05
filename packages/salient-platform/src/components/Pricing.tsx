@@ -82,7 +82,7 @@ function Plan({ name, price, description, href, features, featured = false }) {
         ))}
       </ul>
       <Button
-        href={href}
+        href={true}
         variant={featured ? "solid" : "outline"}
         color="white"
         className="mt-8"

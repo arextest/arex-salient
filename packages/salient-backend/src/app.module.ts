@@ -10,18 +10,18 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 @Module({
   imports: [
-    UserModule,
+    // UserModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../canyon-platform', 'dist'),
+      rootPath: join(__dirname, '../../salient-platform', 'dist'),
       exclude: ['/graphql/(.*)'],
     }),
     ConfigModule.forRoot({
       envFilePath: './.[env]',
     }),
-    GraphQLModule.forRoot<ApolloDriverConfig>({
-      autoSchemaFile: 'schema.gql',
-      driver: ApolloDriver,
-    }),
+    // GraphQLModule.forRoot<ApolloDriverConfig>({
+    //   autoSchemaFile: 'schema.gql',
+    //   driver: ApolloDriver,
+    // }),
   ],
   controllers: [AppController],
   providers: [AppService],

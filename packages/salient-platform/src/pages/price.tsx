@@ -1,5 +1,5 @@
 import { Pricing } from "./../components/Pricing";
-const Landing = () => {
+const Price = () => {
   return (
     <div>
       <>
@@ -9,4 +9,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Price;
