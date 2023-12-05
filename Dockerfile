@@ -11,4 +11,4 @@ RUN pnpm i
 RUN pnpm run build
 
 EXPOSE 8080
-CMD ["node", "packages/arex-backend/dist/main.js" ]
+CMD ["node", "packages/salient-backend/dist/main.js" ]
