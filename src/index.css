@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a{
+  color: #0081f1;
+}
+a:hover{
+  color: #0081f1;
+  opacity: .8;
+}
+
+.ant-menu-light.ant-menu-root.ant-menu-vertical{
+  border-inline-end:none !important;
+}
